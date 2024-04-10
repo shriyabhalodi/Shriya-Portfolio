@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.80, maximum-scale=3.0, minmum-scale= 0.80, user-scalable=no" />
+
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- link file css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+        <nav class="contanier">
+              <p> <span>P</span>ortfolio.</p>
+            <div class="menu-toggle" id ="check"onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+            <div class="nav-links">
+              <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+              <a href="#aboutme"><i class="fa-solid fa-user"></i>About</a>
+              <a href="#skills"><i class="fa-solid fa-code"></i>Skills</a>
+              <a href="#projects"><i class="fa-solid fa-laptop"></i>Projects</a>
+              <a href="#contact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+            </div>
+        </nav>
+    </header>
+    <script type="text/javascript" src="menu.js">
+    </script>
+<div class="home" id="home">
+        <div class="contanier">
+            <div class="content">
+                <h4>Hello, I'm</h4>
+                <h1>Shriya Bhalodi</h1>
+                <span id="typing-animation"></span>
+               <!--- <a href="#" class="btn">Download CV</a> -->
+       </div>
+
+            <div class="home-img">
+                <img src="aboutme.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="my.js"></script>
+
+<!------- About Me------>
+
+<div class ="container-about" id="aboutme">
+  <div class="title">
+  <h2> About Me </h2>
+</div>
+  <div class ="about-content">
+  <!--<div class ="image">
+    <img src="aboutme.JPG" width="300px">
+  </div> -->
+  <div class="content">
+  <p>
+      Thank you for visiting! I'm Shriya Bhalodi, a software engineer with a passion for web development. I have a master's degree in computer science and a solid foundation in SQL, Java, HTML, CSS, JavaScript, and PHP. I am also learning Python to expand my skill set and explore new possibilities in web development.I have experience in developing web applications using various technologies, such as a e-commerce website, a medicine price comparison web application, and a personal blog. I have also completed several academic and personal projects that demonstrate my skills and creativity.I am eager to learn from experienced developers and contribute to innovative and challenging projects. I am looking for an entry-level software engineer position that will allow me to apply and enhance my skills. <br>
+
+You can check out my resume here:<br>
+<div class="btn">
+  <a href="https://drive.google.com/uc?export=download&id=1vLrny_1P4bJWA45r8_oUA_zN7PJo-Yi8" download> <i class="fa-solid fa-cloud-arrow-down"></i>Download CV </a>
+</div>
+    </p>
+
+  <div class="tab-title">
+  <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+  <p class="tab-links " onclick="opentab('Experience')">Experience</p>
+</div>
+<div class="tab-contents active-tab" id="Education">
+  <ul>
+    <li><span>2022-2023</span><br> Master in Computer Science at Florida Institute of Technology</li>
+    <li><span>2015-2018</span><br> Bachelor in Computer Engineering at Charusat University</li>
+  </ul>
+</div>
+<div class="tab-contents" id="Experience">
+  <ul>
+    <li><span>2018-2022</span><br> Front-End Developer in ibiixo Technologies Pvt Ltd  at Rajkot, Gujarat, India</li>
+  </ul>
+</div>
+</div>
+</div>
+<hr>
+
+</div>
+<script>
+  function opentab(tabname) {
+    var tablinks = document.querySelectorAll(".tab-links");
+    var tabcontents = document.querySelectorAll(".tab-contents");
+
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+<!------- Skills-------->
+
+<div class ="container-about" id="skills">
+<div class ="title">
+  <h2> Profesnsional Skills</h2>
+</div>
+<div class="skills">
+<div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> HTML/CSS</span>
+          </div>
+    <div class ="progress">
+      <div class ="progress-bar w-80"></div>
+    </div>
+  </div>
+</div>
+  <div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> PHP</span>
+      
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-75"></div>
+    </div>
+  </div>
+</div>
+<div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> JavaScript</span>
+      
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-70"></div>
+    </div>
+  </div>
+</div>
+
+<div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> SQL</span>
+      
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-68"></div>
+    </div>
+  </div></div>
+<div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> C/C++</span>
+    
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-65"></div>
+    </div>
+  </div>
+</div>
+  <div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> JAVA</span>
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-60"></div>
+    </div>
+  </div>
+  </div>
+  <div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> React</span>
+    
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-55"></div>
+    </div>
+  </div>
+</div>
+<div class ="row">
+  <div class ="item">
+    <div class="item-text">
+      <span> Python</span> 
+    </div>
+    <div class ="progress">
+      <div class ="progress-bar w-50"></div>
+    </div>
+  </div>
+</div>
+</div>
+<hr>
+</div>
+
+
+<!------- Tools--->
+
+  <div class="container-about" id="projects">
+    <div class="title">
+      <h2> Projects </h2>
+    </div>
+    <div class="project-list">
+      <div class="project-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h2> E-COMMERCE WEBSITE </h2>
+        <span class="read-more-text">
+          <ul>
+            <li>Led the development of an e-commerce platform using PHP, HTML, CSS, and JavaScript for front-end design and functionality, ensuring an intuitive and engaging user experience.</li>
+<li>Leveraged React framework to create dynamic and responsive user interfaces, enhancing the websites interactivity and performance using PHP.</li>
+<li>Utilized SQL for database management, implementing efficient data storage and retrieval mechanisms to support seamless transactions and user interactions.</li>
+<li>Integrated Spring Boot framework for backend development, facilitating secure and scalable server-side processing of
+business logic and data operations.</li>
+<li>Developed and maintained dynamic web applications using PHP, MySQL, and JavaScript.</li>
+<li>Implemented new features and functionality in existing PHP applications, improving user experience and performance.</li>
+<li>Collaborated closely with cross-functional teams to gather requirements, design system architecture, and implement
+features, ensuring alignment with business objectives and user needs.</li>
+<li>Conducted thorough testing and debugging to ensure the reliability and stability of the e-commerce platform,
+delivering a high-quality product to meet client expectations.</li>
+<li>Contributed to the projects success by delivering a robust and user-friendly e-commerce website, driving increased
+sales and customer satisfaction.</li>
+        </ul>
+</span>
+<spna class="read-more-btn"> Read More </spna>
+    </div>
+    <div class="project-item">
+      <i class="fa-solid fa-heart"></i>
+        <h2> 24X7 HEALTH AID </h2>
+        <span class="read-more-text">
+        <ul>
+          <li>Led the development of a comprehensive web-based health aid platform aimed at providing users with easy access to
+healthcare resources and information.</li>
+<li>Utilized PHP, Bootstrap, MySQL, and XAMPP technology stack to create a robust and user-friendly application.</li>
+<li>Designed and developed RESTful APIs in PHP for seamless integration with external systems.</li>
+<li>Conducted code reviews and provided technical guidance to junior developers to ensure code quality and best
+practices.</li>
+<li>Integrated PHP applications with third-party APIs, such as payment gateways and social media platforms, to enhance
+functionality.</li>
+<li>Optimized PHP code and database queries for improved performance and scalability.</li>
+<li>Designed and implemented features allowing users to browse and search for healthcare facilities, services, and
+professionals, enabling them to make informed decisions about their medical needs.</li>
+<li>Leveraged Bootstrap framework to ensure a responsive and mobile-friendly user interface, enhancing accessibility
+across various devices.</li>
+<li>Implemented MySQL database for efficient storage and retrieval of healthcare-related data, including facility details,
+doctor profiles, and user preferences.</li>
+<li>Deployed and tested the application on XAMPP local server environment, ensuring seamless functionality and
+performance prior to deployment.</li>
+<li>Collaborated with healthcare professionals and stakeholders to gather requirements and ensure alignment with
+industry standards and best practices.</li>
+<li>Contributed to improving accessibility and availability of healthcare services, ultimately enhancing the overall
+healthcare experience for users.</li>
+</ul>
+</span>
+<spna class="read-more-btn"> Read More </spna>
+    </div>
+    </div>
+  </div>
+ <script src="read-more.js"></script>
+
+<!--- Contact me---->
+ <div class="container-1" id="contact">
+    <div class="title-1">
+      <h2> Keep In Touch </h2>
+    </div>
+    <div class ="contact-content">
+  <div class ="icon">
+    <i class="fa-solid fa-envelope"></i>
+  </div>
+  <div class="text">
+    <p> Do you have a cool project idea? Let's team up and make it happen! I'm all about partnering with enthusiastic folks who want to build awesome stuff. If that sounds like you, shoot me a message and let's chat!</p>
+
+    <p>Shriya Bhalodi<br> +1(352)255-6581 <br> shriyabhalodi@gmail.com</p>
+  </div>
+  </div>
+</div>
+
+<a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  <script src="main.js"></script>
+<footer>
+<div class="bottom-part">
+    <div class="bottom-part-content">
+<h4>SHRIYA BHALODI</h4>
+<p>This is my digital personal portfolio @2024. All Rights Reserved.</p>
+</div>
+</div> 
+</footer>
+</body>
+
+</html>

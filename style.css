@@ -1,0 +1,908 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+}
+*::selection{
+    background-color: #ffaa17;
+    color: #fff;
+}
+
+html body{
+    scroll-behavior: smooth;
+}
+body
+{
+    width: 100%;
+}
+.contanier{
+    width: 80%;
+    margin: auto;
+}
+.contanier p{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+.contanier span
+{
+    color: #FFBF00;
+    font-size: 35px;
+    font-weight: bold;
+}
+section{
+    padding: 90px 0 40px;
+}
+
+.boxs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.boxs .box{
+    width: 30%;
+}
+/* start Header */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: black;
+}
+
+header.active {
+    background-color: #1c1e22;
+    border-bottom: 1px solid #8888884a;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+header nav .nav-links a {
+    color: #fff;
+    margin-left: 50px;
+}
+
+header nav .nav-links a:hover,
+header nav .nav-links a.active {
+    border-bottom: 2px solid #ffaa17;
+    padding-bottom: 2px;
+    transition: 0.5s;
+}
+.home{
+    padding-top: 60px;
+    background: black;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .contanier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .content h4{
+    color: #ffaa17;
+    font-size: 30px;
+}
+.home .content h1{
+    color: #fff;
+    font-size: 65px;
+    margin: 20px 0 10px;
+}
+.home .content p{
+    color: #e4e4e4;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+.home .content span
+{
+    font-size: 65px;
+    margin: 20px 0 10px;
+}
+.home .content .btn{
+    font-size: 18px;
+}
+.home .home-img img{
+    width: 350px;
+}
+#btn-menu{
+    display: none;
+    cursor: pointer;
+
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.container-about
+{
+    width: 80%;
+    margin: 10px auto;
+    background-color: white;   
+}
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.title h2
+{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 5px solid #FFBF00;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.content p
+{
+    font-size: 15px;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.tab-title
+{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links
+{
+    margin-right: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after
+{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: #FFBF00;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after
+{
+    width: 50%;
+}
+
+.tab-contents ul li
+{
+    list-style: none;
+    margin: 10px 0;
+    color: black;
+
+}
+.tab-contents ul li span
+{
+    color: #FFBF00;
+    font-size: 14px;
+}
+.tab-contents
+{
+    display: none;
+}
+.tab-contents.active-tab
+{
+    display: block;
+}
+hr
+{
+width: 100%; 
+height: 2px; 
+background-color: #f4f4f4;  
+margin-bottom: 7px;     
+margin-top: 9px;  
+}
+
+.btn
+{
+    margin-top: 40px;
+}
+.btn a
+{
+    background-color:  #FFBF00;
+    font-size: 19px;
+    letter-spacing: 1px;
+    border: 1px solid  #FFBF00;
+    padding: 13px 25px;
+    border-radius: 50px;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: white;
+}
+.btn a:hover
+{
+    background: #dcdcdc;
+    color: black;
+    border: 2px solid #fff;
+}
+/* Skills */
+.skills {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    justify-content: space-between;
+  display: grid;
+  color:  #b3b3b3;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.item-text span
+{
+    color: black;
+    font-weight: bold;
+}
+.container-about .item {
+  padding: 0.2rem 0;
+  margin: 0.1rem 0;
+}
+
+.container-about .item-text {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.3rem;
+  position: 0px !important;
+}
+
+.container-about .progress {
+  margin: 0.3rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: relative;
+  height: 100%;
+}
+
+.progress-bar::before,
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color:  #414141;
+}
+
+.progress-bar::before {
+  left: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.progress-bar::after {
+  right: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.progress
+{
+  margin: 0.3rem 0; 
+  height: 20px;
+  width: 100%;
+  background-color: #b3b3b3;
+  overflow: hidden;
+}
+.progress-bar
+{
+  background: #414141;
+  height: 100%;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.progress-bar.w-80
+{
+  width: 80%;
+}
+.progress-bar.w-75
+{
+  width: 75%;
+}
+.progress-bar.w-70
+{
+  width: 70%;
+}
+.progress-bar.w-68
+{
+  width: 68%;
+}
+.progress-bar.w-65
+{
+  width: 65%;
+}
+.progress-bar.w-60
+{
+  width: 60%;
+}
+.progress-bar.w-55
+{
+  width: 55%;
+}
+.progress-bar.w-50
+{
+  width: 50%;
+}
+
+/* Projects */
+
+.project-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding-bottom: 25px;
+}
+
+.project-item {
+    background-color: #414141;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;   
+    color: white; 
+    width: 350px; /* Set a fixed width for each project item */
+    text-align: center; /* Center-align the content */
+}
+
+.project-item i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.project-item h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.project-item p {
+    font-size: 10px;
+}
+
+.project-item ul {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.read-more-btn {
+    color: #FFBF00;
+    cursor: pointer;
+}
+
+.read-more-text {
+    display: none;
+}
+
+.read-more-text--show {
+    display: inline;
+}
+
+ /* Contact */
+
+.container-1
+{
+    padding: 15px;
+    background: black;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-1 .title-1
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.container-1 .title-1 h2
+{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 5px solid #FFBF00;
+  color: white;
+  padding-bottom: 5px;
+}
+
+.contact-content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Center-align content vertically */
+}
+
+.contact-content .icon {
+    width: 200px;
+    font-size: 180px; /* Decrease icon size */
+    margin-right: 30px;
+    border-radius: 10px; 
+}
+
+.contact-content .icon i {
+    color: #ffffff; /* White color for icon */
+}
+
+.contact-content .text {
+    flex: 1;
+    color: #ffffff; /* White color for text */
+}
+
+.contact-content .text p {
+    font-size: 16px; /* Increase font size */
+    line-height: 1.8; /* Increase line height for better readability */
+    text-align: justify;
+}
+
+.contact-content .text p:first-of-type {
+    margin-bottom: 20px; /* Add some bottom margin to the first paragraph */
+}
+
+.contact-content .text p:last-of-type {
+    margin-top: 20px; /* Add some top margin to the last paragraph */
+}
+
+.contact-content .text h2 {
+    text-decoration: underline;
+    text-decoration-color: #FFBF00;
+    text-decoration-thickness: 3px;
+    font-size: 20px; /* Increase font size */
+    margin-bottom: 10px; /* Add some bottom margin */
+}
+
+.contact-content .text h4 {
+    font-size: 14px; /* Decrease font size */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.to-top {
+    background: #7e7e7e;
+    position: fixed;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 37px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s, bottom 0.4s;
+    cursor: pointer;
+}
+
+.to-top.active {
+    bottom: 10px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+footer {
+    background-color: #dcdcdc; /* Background color */
+    padding: 10px; /* Padding around the content */
+    text-align: center; /* Align the content to the center */
+}
+
+/* Style for the footer content */
+.bottom-part-content {
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for the footer heading */
+.bottom-part-content h4 {
+    font-size: 18px; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Style for the footer paragraph */
+.bottom-part-content p {
+    font-size: 14px; /* Font size */
+    color: #666; /* Text color */
+    margin-top: 10px;
+}
+
+
+
+/* Add this at the end of your existing CSS */
+
+/* Add this at the end of your existing CSS */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    body
+    {
+        overflow-x: hidden;
+    }
+    .contanier {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 0 20px; /* Add horizontal padding */
+    }
+  .container-about {
+        width: 100%; /* Adjust width for smaller screens */
+        margin: 5px auto; /* Adjust margin for smaller screens */
+    }
+  .title h2 {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+    .title-1 h2 {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+  .home
+  {
+    padding-top: 100px;
+    min-height: 60vh;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .home .contanier {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    text-align: center;
+    margin-top: 10px; /* Center-align content */
+  }
+  .home .content {
+    order: 2; /* Change the order of the content */
+  }
+  .home .hero-img {
+    order: 1; /* Change the order of the image */
+  }
+  .home .content h1 {
+    font-size: 40px; /* Decrease font size for smaller screens */
+  }
+  .home .content span {
+    font-size: 40px; /* Decrease font size for smaller screens */
+  }
+  .home .content p {
+    font-size: 20px; /* Decrease font size for smaller screens */
+ /* Adjust margin */
+  }
+  .home .hero-img img {
+    width: 70%; /* Adjust image size */
+     /* Add some margin to the top */
+  }
+  .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        background: transparent;
+        transition: .5s;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 3px 0;
+    }
+  header nav .nav-links {
+        display: none; /* Hide the navigation links by default on smaller screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 40px; /* Position the dropdown below the header */
+        right: 0;
+        background: black;
+        padding: 10px;
+        z-index: 999; /* Ensure dropdown is above other content */
+    }
+
+    header nav .nav-links a {
+        display: block; /* Ensure links are stacked vertically */
+        margin: 10px 0; /* Add some vertical spacing between links */
+    }
+
+    /* Toggle button */
+    #btn-menu {
+        display: block; /* Show the menu button */
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+
+    }
+
+  /* About Me  */
+  .content {
+    flex: 1; /* Ensure content takes full width */
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+  .content p {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
+  .tab-title {
+    flex-direction: column; /* Stack tabs vertically for smaller screens */
+    margin: 20px 0; /* Adjust margin */
+    display: inline-block;
+  }
+  .tab-links {
+    display: inline-block;
+    margin-right: 0; /* Remove margin for smaller screens */
+    margin-bottom: 10px; /* Add some margin to the bottom */
+    font-size: 30px; /* Decrease font size for smaller screens */
+  }
+  .tab-links:last-child {
+    margin-left: 40px; /* Remove margin for the last tab link */
+  }
+  .tab-contents ul li {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+  .btn {
+    margin-top: 20px; /* Adjust margin */
+  }
+  .btn a {
+    font-size: 16px; /* Decrease font size for smaller screens */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  /* Skills */
+
+  
+
+  .skills {
+    width: 100%; /* Make skills section full width on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    
+  }
+
+  .item {
+    margin-bottom: 1.5rem; /* Add bottom margin to each skill row */
+  }
+
+  .progress-bar {
+    border-radius: 2px; /* Remove border radius from progress bar for better appearance on smaller screens */
+  }
+
+  /* Contact me */
+  .container-1 {
+    width: 100%; /* Adjust container width for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .contact-content {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .contact-content .icon {
+       display: none;
+    }
+    
+    
+    .to-top {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+     body
+    {
+        overflow-x: hidden;
+    }
+    .contanier
+    {
+        width: 80%;
+    }
+  .home .content h1 {
+    font-size: 30px; /* Further decrease font size for smaller screens */
+  }
+  .home .content span {
+    font-size: 30px; /* Further decrease font size for smaller screens */
+  }
+  .home .content p {
+    font-size: 18px; /* Further decrease font size for smaller screens */
+  }
+  .title {
+        margin: 10px auto; /* Adjust margin for smaller screens */
+    }
+  .title h2 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+    .title-1 h2 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+  /* About Me */
+  .container-about {
+    width: 80%; /* Adjust container width for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+  .image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Ensure aspect ratio is maintained */
+    margin-right: 0; /* Remove right margin for smaller screens */
+    margin-bottom: 20px; /* Add some margin to the bottom */
+    border-radius: 10px; /* Keep border radius */
+  }
+  .content {
+    flex: 1; /* Ensure content takes full width */
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+  .content p {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
+  .tab-title {
+    margin: 20px 0; /* Adjust margin */
+  }
+  .tab-links {
+    margin-right: 20px; /* Adjust margin between tab links */
+    font-size: 20px; /* Decrease font size for smaller screens */
+    display: inline-block; /* Display tab links side by side */
+  }
+  .tab-links:last-child {
+    margin-right: 0; /* Remove margin for the last tab link */
+  }
+  .tab-contents ul li {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+  .btn {
+    margin-top: 20px; /* Adjust margin */
+  }
+  .btn a {
+    font-size: 16px; /* Decrease font size for smaller screens */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  /* skills */
+
+ .container-1 {
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+
+  .skills {
+    grid-gap: 1rem; /* Further reduce grid gap for better spacing on smaller screens */
+  }
+
+  .item-text {
+    font-size: 1rem; /* Decrease font size for skill names on smaller screens */
+  }
+
+  .progress-bar {
+    border-radius: 0; /* Remove border radius from progress bar for better appearance on smaller screens */
+  }
+
+  /* Project */
+
+  .project-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .project-item {
+    width: 100%; /* Make each item take full width */
+  }
+
+  .project-item h2 {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+
+  .project-item i {
+    font-size: 40px; /* Decrease icon size for smaller screens */
+  }
+
+  .project-item p,
+  .project-item a {
+    font-size: 10px; /* Decrease font size for smaller screens */
+  }
+
+  .to-top {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    margin-bottom:20px;
+  }
+  header nav .nav-links {
+    display: none;
+  }
+  #btn-menu {
+    display: block; /* Show menu button */
+    color: #fff; /* Button color */
+    font-size: 24px; /* Button size */
+    cursor: pointer; /* Show pointer cursor */
+    margin-right: 20px; /* Add some margin */
+  }
+
+}
